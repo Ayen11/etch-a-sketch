@@ -1,6 +1,9 @@
 let gridsize = 64;
 function GetGridSize() {
     gridsize = parseInt(prompt("number"));
+    if (gridsize > 100) {
+        gridsize=100;
+    };
     console.log(gridsize);
     setupGrid(gridsize);
     };
@@ -19,8 +22,8 @@ for (var i = 1; i <= gridsize*gridsize; i++) {
     })
 };
 
-const btn = document.querySelector('#reset');
-btn.onclick = function () {
+const resetBtn = document.querySelector('#reset');
+resetBtn.onclick = function () {
     GetGridSize();
 };
 
@@ -29,6 +32,7 @@ btn.onclick = function () {
 function setupGrid(gridsize) {
     container.style.gridTemplateColumns = `repeat(${gridsize}, 1fr)`
     container.style.gridTemplateRows = `repeat(${gridsize}, 1fr)`
+    container.innerHTML = ''
 
 for (var i = 1; i <= gridsize*gridsize; i++) {
     const content = document.createElement('div');
@@ -36,7 +40,8 @@ for (var i = 1; i <= gridsize*gridsize; i++) {
     //content.textContent = i;
     container.appendChild(content);
     content.addEventListener("mouseover", () =>{
-        content.classList.add('hovered')
+        content.classList.remove('hovered');
+        content.classList.add('hovered');
     })
 }};
 
