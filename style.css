@@ -1,0 +1,16 @@
+#container {
+    background-color: beige;
+    display: inline-grid;
+    border: 1px black solid;
+    margin: 2rem;
+    grid-template-columns: 10fr 10fr 10fr 10fr;
+    grid-template-rows: 10fr 10fr 10fr 10fr;
+};
+
+#container > div {
+    display: contents;
+}
+
+.square {
+    padding: 4rem;
+}
