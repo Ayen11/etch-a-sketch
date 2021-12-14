@@ -1,9 +1,12 @@
 #container {
+    width: 600px;
+    height: 600px;
     background-color: beige;
     display: inline-grid;
     border: 1px black solid;
     margin: 2rem;
-    grid-template-columns: repeat(16, minmax(0,1fr));
+    
+   
 };
 
 #container > div {
@@ -13,7 +16,10 @@
 .square {
     border: black 1px;
     text-align: center;
-    padding: 20px;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    display: block;
 }
 
 .hovered {
