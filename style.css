@@ -3,8 +3,7 @@
     display: inline-grid;
     border: 1px black solid;
     margin: 2rem;
-    grid-template-columns: 10fr 10fr 10fr 10fr;
-    grid-template-rows: 10fr 10fr 10fr 10fr;
+    grid-template-columns: repeat(16, minmax(0,1fr));
 };
 
 #container > div {
@@ -12,5 +11,11 @@
 }
 
 .square {
-    padding: 4rem;
+    border: black 1px;
+    text-align: center;
+    padding: 20px;
+}
+
+.hovered {
+    background-color: cornflowerblue;
 }
